@@ -2,7 +2,7 @@ package creational.factory;
 
 public class PortClient {
     public static void main(String[] args) {
-        PortFactory portFactory = new PortFactory();
+        PortFactory portFactory = PortFactory.getPortFactory();
         Port httpPort = portFactory.getPort(PortType.HTTP);
         Port ftpPort = portFactory.getPort(PortType.FTP);
         System.out.println(httpPort.sendRequest(" http port"));
